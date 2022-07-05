@@ -17,6 +17,8 @@
 
   - Image encoder는 입력으로 message와 image를 받아 둘을 결합하여 embedded image를 생성해내며 논문에서와 같이 U-Net 을 차용하였고 U-Net Decoder에서 U-Net Encoder의 feature map을 받을 때 메시지도 concatenation 하여 함께 들어간다.
   
+  - U-Net source code : https://colab.research.google.com/github/usuyama/pytorch-unet/blob/master/pytorch_unet_resnet18_colab.ipynb
+  
   - Image decoder는 입력으로 image를 받아들여 message를 추출해내며 논문과 동일하게 7개의 Convolution layer를 쌓고 FC layer 에서 message 길이 만큼의 vector를 뽑아 sigmoid를 적용하였다.
  
  ![image](https://user-images.githubusercontent.com/77950714/173226674-ac13c08f-9a8a-416c-8862-282524e358f2.png)
