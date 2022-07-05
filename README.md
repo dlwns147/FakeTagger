@@ -1,4 +1,4 @@
-## 3. Simple FakeTagger implementation
+# Simple FakeTagger implementation
 
 ![image](https://user-images.githubusercontent.com/77950714/173223624-f2afc2b4-500f-4ee2-81f2-11a7b1c0b4f4.png)
 
