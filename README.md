@@ -1,5 +1,5 @@
 
- ## This repository is a simple implication of "FakeTagger: Robust Safeguards against DeepFake Dissemination via Provenance Tracking" (https://arxiv.org/abs/2009.09869).
+ This repository is a simple, unofficial implementation of "FakeTagger: Robust Safeguards against DeepFake Dissemination via Provenance Tracking" (https://arxiv.org/abs/2009.09869).
 
 # Simple FakeTagger implementation
 
