@@ -1,10 +1,13 @@
+
+ ## This repository is a simple implication of "FakeTagger: Robust Safeguards against DeepFake Dissemination via Provenance Tracking" (https://arxiv.org/abs/2009.09869).
+
 # Simple FakeTagger implementation
 
 ![image](https://user-images.githubusercontent.com/77950714/173223624-f2afc2b4-500f-4ee2-81f2-11a7b1c0b4f4.png)
 
- FakeTagger는 총 5개의 module로 구성되어있다. 
+ FakeTagger is composed of 5 modules
  
- 1. Message Generator는 0, 1로 이루어진 메시지에 redundant data를 추가한다.
+ 1. Message Generator creates a message with 0, 1 and add redundant data on the message.
  2. Image Encoder는 Message Generator가 생성해낸 redundant message를 input image에 삽입하고 원본 이미지(input image)와 구분이 안가는 embedded image를 생성해낸다. 
  3. GAN Simulator는 embedded image에 딥페이크를 적용하여 manipulated embedded image를 생성한다.
  4. Image Decoder는 image encoder에서 나온 embedded image 또는 GAN Simulator에서 나온 manipulated embedded image에서 redundant message를 추출해낸다.
