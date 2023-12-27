@@ -167,8 +167,8 @@ for i in tqdm(range(args.epoch)):
             cage_val_x = cage_val_x.to(device)
             
             for k in range(0, 10, 1) :
-                cv2.imwrite('/media/data1/sangjun/faketagger/result/trump/' + str(k) + '/trump_real_' + str(i) + '.png', (trump_val_x[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
-                cv2.imwrite('/media/data1/sangjun/faketagger/result/cage/' + str(k) + '/cage_real_' + str(i) + '.png', (cage_val_x[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                cv2.imwrite('.faketagger/result/trump/' + str(k) + '/trump_real_' + str(i) + '.png', (trump_val_x[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                cv2.imwrite('.faketagger/result/cage/' + str(k) + '/cage_real_' + str(i) + '.png', (cage_val_x[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
                 
             trump_message = torch.randint(0, 2, (trump_val_x.shape[0], args.message_size), dtype = torch.float).to(device).detach()
             cage_message = torch.randint(0, 2, (cage_val_x.shape[0], args.message_size), dtype = torch.float).to(device).detach()
@@ -177,8 +177,8 @@ for i in tqdm(range(args.epoch)):
             encoded_cage = model.encode(cage_val_x, cage_message)
             
             for k in range(0, 10, 1) :
-                cv2.imwrite('/media/data1/sangjun/faketagger/result/trump/' + str(k) + '/trump_encoded_' + str(i) + '.png', (encoded_trump[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
-                cv2.imwrite('/media/data1/sangjun/faketagger/result/cage/' + str(k) + '/cage_encoded_' + str(i) + '.png', (encoded_cage[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                cv2.imwrite('./faketagger/result/trump/' + str(k) + '/trump_encoded_' + str(i) + '.png', (encoded_trump[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                cv2.imwrite('./faketagger/result/cage/' + str(k) + '/cage_encoded_' + str(i) + '.png', (encoded_cage[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
             
             
             image_loss = criterion(encoded_trump, trump_val_x) + criterion(encoded_cage, cage_val_x)
@@ -190,8 +190,8 @@ for i in tqdm(range(args.epoch)):
                 encoded_cage_df = model.deepfake(encoded_cage, 'A')
                 
                 for k in range(0, 10, 1) :
-                    cv2.imwrite('/media/data1/sangjun/faketagger/result/trump/' + str(k) + '/trump_encoded_fake_' + str(i) + '.png', (encoded_trump_df[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
-                    cv2.imwrite('/media/data1/sangjun/faketagger/result/cage/' + str(k) + '/cage_encoded_fake_' + str(i) + '.png', (encoded_cage_df[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                    cv2.imwrite('./faketagger/result/trump/' + str(k) + '/trump_encoded_fake_' + str(i) + '.png', (encoded_trump_df[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
+                    cv2.imwrite('./faketagger/result/cage/' + str(k) + '/cage_encoded_fake_' + str(i) + '.png', (encoded_cage_df[k] * 255).permute(1, 2, 0).detach().cpu().numpy())
                     
                 encoded_trump_df_message = model.decode(encoded_trump_df)
                 encoded_cage_df_message = model.decode(encoded_cage_df)
