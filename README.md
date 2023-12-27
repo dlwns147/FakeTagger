@@ -42,14 +42,14 @@ python train.py --batch_size 128 --name name
 python train.py --batch_size 128 --name name
 ```
  
- ### 생성 예시
+ ### Examples of Generated Images
  
  ![image](https://user-images.githubusercontent.com/77950714/173226638-e1ee9f6b-d5df-4a46-9b77-138a7d05b3ce.png)
 
 ![image](https://user-images.githubusercontent.com/77950714/173226646-2e10034c-a593-42a9-ae54-ff5c4cb1847e.png)
 
 
- ### 실험 결과
+ ### Experimental Results
  
  #### 1) 𝜆 = 1, 𝛼 = 0.1
  ![image](https://user-images.githubusercontent.com/77950714/173226808-37daa08a-b233-49ce-aeb2-34a07351e9a4.png)
