@@ -45,9 +45,9 @@ os.environ["CUDA_VISIBLE_DEVICES"]= args.gpus
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-TRUMP_PATH = '/media/data1/sangjun/faketagger/resized_data/trump'
-CAGE_PATH = '/media/data1/sangjun/faketagger/resized_data/cage'
-SAVE_PATH = '/media/data1/sangjun/faketagger/result/save'
+TRUMP_PATH = './faketagger/resized_data/trump'
+CAGE_PATH = './faketagger/resized_data/cage'
+SAVE_PATH = './faketagger/result/save'
 
 
 transform_train = transforms.Compose([
