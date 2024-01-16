@@ -13,7 +13,7 @@
  4. **Image decoder** extracts redundant messages from the embedded image or the *manipulated embedded* image.
  5. **Message Decoder** extracts the original message from the redundant message.
 
- In this repository, only Image Encoder, GAN Simulator, Image Decoder are implemented.
+ In this repository, only **Image Encoder**, **GAN Simulator**, **Image Decoder** are implemented.
  
  ### Image Encoder, Decoder
  ![image](https://user-images.githubusercontent.com/77950714/173226563-75952226-d58b-4320-b3a8-b49b37f9af2b.png)
